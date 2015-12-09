@@ -1,0 +1,31 @@
+<div class="wrapper wrapper_padding clearfix">
+            <div class="col-1 about homepage_content">
+                <h2>About</h2>
+                <hr> 
+                    <p>I'm a photographer &amp; developer living in Seoul, South Korea.</p>
+                    <p>My day job is research engineering at AADL, Konkuk University. On weekends, you can find me snapping photos</p>
+                    <p>I am a starter in web development industry. You can follow me on <a href="#">twitter</a>, facebook and githb.</p>
+            </div>
+            <div class="col-2 homepage_content">
+                 <h2>Stuff I've Written</h2>
+                 <hr> 
+                 <% @posts.each do |post| %>
+                    <h3><a href="#"><%= link_to post.title, post %></a></h3>
+                    <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+                 <%end %>
+                 
+                 
+            </div>
+            <div class="col-3 homepage_content">
+                  <h2>Stuff I've Built</h2>
+                 <hr> 
+                 <h3><a href="#">Preliminary Sizing App</a></h3>
+                 <p class="date">Friday April 10th</p>
+                 <h3><a href="#">Scramjet Framework</a></h3>
+                 <p class="date">Friday April 10th</p>
+                 <h3><a href="#">ProjectBox</a></h3>
+                 <p class="date">Friday April 10th</p>
+            </div>
+        </div>
+        
+        

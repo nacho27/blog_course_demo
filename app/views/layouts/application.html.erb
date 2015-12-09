@@ -10,7 +10,7 @@
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
-            <a href="#" class="name">Su Su Aung</a>
+            <%= link_to "Su Su Aung", root_path, class:"name" %>
             <nav>
                 <%= link_to "Articles", posts_path %>
                 <a href="#">Projects</a>
@@ -18,8 +18,15 @@
                
             </nav>
         </header>
-
+        
 <%= yield %>
-
+        <footer id="main_footer">
+            <p class="copyright">&copy; 2015 Su Su Aung </p>
+            <nav> 
+                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+            </nav>
+        </footer>
 </body>
 </html>
