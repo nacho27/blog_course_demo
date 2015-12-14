@@ -47,6 +47,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development do
 	gem 'sqlite3'
