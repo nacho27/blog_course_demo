@@ -1,0 +1,30 @@
+<div id="post_show_content"class="skinny_wrapper wrapper_padding">
+            <header>
+                <p class="date"><%= @project.created_at.strftime('%A, %B %d') %></p>
+                <h1><%= @project.title %></h1>
+                <hr>
+             </header>    
+                <div id="content">
+                        <%= markdown @project.description %>
+                        <div class="button_wrapper">
+                        <a href="<%= @project.plink %>" class="project_button" target="_blank" >Visit <%= @project.title %></a>
+                        </div>
+                      
+                </div>
+                <hr>
+                <div id="share_box">
+                   <p>Share <%= @project.title %> </p>
+                   <!-- Twitter -->
+                   <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @project.title%> by @nacho_927 - &amp;url=<%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                   <i class="fa fa-twitter"></i></a>
+                   <!-- Facebook -->
+                   <a onlick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@project, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                   <i class="fa fa-facebook"></i></a>    
+                   <!--- Google Plus -->
+                   <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@project, {only_path:false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                   <i class="fa fa-google-plus"></i>  </a>          
+                </div>
+                <hr>
+                
+         </div>
+<%= link_to "Edit", edit_project_path(@project) %>
