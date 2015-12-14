@@ -34,6 +34,11 @@ class ProjectsController < ApplicationController
             render 'edit'
         end
 	end
+
+	def destroy
+		@project.destroy
+		redirect_to projects_path
+	end
 	private 
 
 	def find_project
