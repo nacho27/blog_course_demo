@@ -1,0 +1,17 @@
+<div id="disqus_thread"></div>
+<script>
+/* * * CONFIGURATION VARIABLES * * */
+var disqus_shortname='bloggingcourse'; //required: replace example with your forum shortname
+var disqus_identifier= '<%= @post.id %>';
+var disqus_title = '<%= @post.title %>';
+var disqus_url = '<%= url_for([@post, {only_path: false}]) %>';
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bloggingcourse-aung.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
